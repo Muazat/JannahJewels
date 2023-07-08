@@ -1,60 +1,74 @@
 <template>
   <div>
     <div class="backdrop" ref="backDrop" @click="backdropClickHandler"></div>
+
+    <Announcement></Announcement>
+
     <header class="main-header">
       <button id="side-menu-toggle" @click="menuToggleClickHandler">
-        <svg
-          class="h-6 w-6"
-          aria-hidden="true"
-          fill="white"
-          viewBox="0 0 20 20"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            fill-rule="evenodd"
+        <svg class="h-6 w-6" aria-hidden="true" fill="white" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd"
             d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
-            clip-rule="evenodd"
-          ></path>
+            clip-rule="evenodd"></path>
         </svg>
       </button>
-      <p class="text-lg font-bold text-white md:hidden">Student PA</p>
+
+
+      <div class="flex items-center justify-center gap-4 md:hidden">
+        <div class="">
+          <img class="h-18 w-32 rounded-full" src="../assets/img/named-logo.png" alt="">
+        </div>
+        <div>
+          <Profile class=""></Profile>
+        </div>
+      </div>
+
+
       <nav class="main-header__nav">
-        <ul class="main-header__item-list">
+        <ul class="main-header__item-list text-xl">
           <li class="main-header__item">
-            <NuxtLink class="active muaxxa" to="/">Student PA</NuxtLink>
+            <img class="h-32 w-44 rounded-full" src="../assets/img/named-logo.png" alt="">
+          </li>
+        </ul>
+        <ul class="main-header__item-list text-lg">
+          <li class="main-header__item">
+            <NuxtLink class="active " to="/">About Us</NuxtLink>
+          </li>
+          <li class="main-header__item">
+            <NuxtLink class="active" to="/">Programs</NuxtLink>
+          </li>
+          <li class="main-header__item">
+            <NuxtLink class="active" to="/">Membership</NuxtLink>
+          </li>
+          <li class="main-header__item">
+            <NuxtLink class="active" to="/">Gallery</NuxtLink>
+          </li>
+          <li class="main-header__item">
+            <NuxtLink class="active" to="/">News</NuxtLink>
           </li>
         </ul>
         <ul class="main-header__item-list">
           <li class="main-header__item">
-            <NuxtLink class="" to="/login">Log In</NuxtLink>
+            <!-- <NuxtLink class="" to="/login">Log In</NuxtLink> -->
+            <Mbutton class="rounded bg-[#1f3481]">DONATE</Mbutton>
           </li>
           <li class="main-header__item">
-            <NuxtLink class="" to="/signup">Sign Up</NuxtLink>
+            <Profile></Profile>
           </li>
-          <!-- <li class="main-header__item">
-            <NuxtLink class="" to="/admin-login">Instructor</NuxtLink>
-          </li> -->
         </ul>
       </nav>
     </header>
 
+    <MobileNav></MobileNav>
+
     <nav ref="sideDrawer" class="mobile-nav">
       <ul class="mobile-nav__item-list">
         <li class="mobile-nav__item">
-          <NuxtLink class="" to="/login" @click="backdropClickHandler"
-            >Log In</NuxtLink
-          >
+          <NuxtLink class="" to="/login" @click="backdropClickHandler">Log In</NuxtLink>
         </li>
         <li class="mobile-nav__item">
-          <NuxtLink class="" to="/signup" @click="backdropClickHandler"
-            >Sign Up</NuxtLink
-          >
+          <NuxtLink class="" to="/signup" @click="backdropClickHandler">Sign Up</NuxtLink>
         </li>
-        <!-- <li class="mobile-nav__item">
-          <NuxtLink class="" to="/admin-login" @click="backdropClickHandler"
-            >Instructor</NuxtLink
-          >
-        </li> -->
       </ul>
     </nav>
     <slot />
