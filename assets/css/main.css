@@ -212,7 +212,8 @@ main {
 /* Smartphones */
 @media (max-width: 767px) {
   .main-header {
-    padding: 2rem 1rem 2rem 0.7rem;
+    /* padding: 2rem 1rem 2rem 0.7rem; */
+    display: none;
   }
 
   main {

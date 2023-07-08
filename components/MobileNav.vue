@@ -1,7 +1,7 @@
 <template>
-  <div class="m-0 md:hidden">
-    <nav class="font-bold text-black mobile-header md:hidden">
-      <ul class="m-0 p-0 text-xs flex flex-nowrap">
+  <div class="md:hidden m-0">
+    <nav class="font-bold text-black bg-[#ffdb58] mx-[1/4] md:hidden">
+      <ul class="m-0 p-0 text-xs flex flex-nowrap justify-between ">
         <li class=" p-1">
           <NuxtLink class="active" to="/">About Us</NuxtLink>
         </li>

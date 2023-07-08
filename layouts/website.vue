@@ -1,10 +1,10 @@
 <template>
+  <Announcement></Announcement>
   <div>
     <div class="backdrop" ref="backDrop" @click="backdropClickHandler"></div>
 
-    <Announcement></Announcement>
 
-    <header class="main-header">
+    <!-- <div class="flex items-center justify-center gap-16 bg-black md:hidden">
       <button id="side-menu-toggle" @click="menuToggleClickHandler">
         <svg class="h-6 w-6" aria-hidden="true" fill="white" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
           <path fill-rule="evenodd"
@@ -12,18 +12,16 @@
             clip-rule="evenodd"></path>
         </svg>
       </button>
-
-
-      <div class="flex items-center justify-center gap-4 md:hidden">
-        <div class="">
-          <img class="h-18 w-32 rounded-full" src="../assets/img/named-logo.png" alt="">
-        </div>
-        <div>
-          <Profile class=""></Profile>
-        </div>
+      <div class="">
+        <img class="h-18 w-32 rounded-full" src="../assets/img/named-logo.png" alt="">
       </div>
-
-
+      <div>
+        <Profile class=""></Profile>
+      </div>
+    </div> -->
+    <Nav></Nav>
+    <MobileNav></MobileNav>
+    <header class="main-header">
       <nav class="main-header__nav">
         <ul class="main-header__item-list text-xl">
           <li class="main-header__item">
@@ -59,7 +57,7 @@
       </nav>
     </header>
 
-    <MobileNav></MobileNav>
+    <!-- <MobileNav></MobileNav> -->
 
     <nav ref="sideDrawer" class="mobile-nav">
       <ul class="mobile-nav__item-list">
@@ -78,6 +76,14 @@
         <span>{{ useAppLoaderText }}</span>
       </div>
     </Modal>
+
+
+
+
+
+
+
+
   </div>
 </template>
 
